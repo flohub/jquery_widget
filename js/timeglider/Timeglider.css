@@ -1,6 +1,40 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*FK*/
+#placement, .timeglider-container {
+	font-family:Helvetica, Arial, sans-serif;
+	width:100%;
+	/*margin:32px auto 32px auto;*/
+	height:300px;
+	/*position:absolute;*/
+	
+}
+
+.titleBar {
+	display:none;
+}
+
+.timeglider-container {
+	border-radius: 0px;
+}
+
+.timeglider-slider-container {
+	display:none;
+}
+
+#ingpsy li {
+	display: inline;
+	padding-right: 10px;
+}
+
+#ingpsy ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*end FK*/
+
 .timeglider-container {
 	
 	position:relative;
@@ -160,7 +194,7 @@
 	font-size:11px;
 	background-color:#75a3c7; 
 	/* A line as bg doesn't alter the width of the div!*/
-	background-image:url("img/dotted.png");
+	background-image:url("../../../images/zeitstrahl/icons/dotted.png");
 	background-repeat:no-repeat;
 }
 
@@ -230,10 +264,10 @@
 	margin-top:-16px;
 	width:30px;
 	height:30px;
-	background-image:url(buttons/close.png);
+	background-image:url("../../../images/zeitstrahl/icons/close.png");
 }
 
-.timeglider-close-button-small {
+/*.timeglider-close-button-small {
   float:right;
 	cursor:pointer;
 
@@ -242,7 +276,7 @@
 	background-image:url(buttons/close_small.png);
 	margin-top:-8px;
 	margin-right:-7px;
-}
+}*/
 
 #timeglider-measure-span {
 	font-size:12px;
@@ -251,6 +285,7 @@
 	position:absolute;
 	top:-50px;
 	left:0px;
+	visibility:hidden;
 }
 
 
@@ -417,11 +452,11 @@
 	margin-top:-16px;
 	width:30px;
 	height:30px;
-	background-image:url(buttons/close.png);
+	background-image:url("../../../images/zeitstrahl/icons/close.png");
 }
 	
 
-.timeglider-menu-modal-point-right {
+/*.timeglider-menu-modal-point-right {
     width:20px;
     height:20px;
     background-image:url("img/menu-pointer-right.png");
@@ -429,7 +464,7 @@
     position:absolute;
     bottom:-20px;
     right:6px;
-}
+}*/
 
 
 .timeglider-pan-buttons {
@@ -447,16 +482,13 @@
     background-repeat:no-repeat;
     cursor:pointer;
 }
-.timeglider-pan-left {
+/*.timeglider-pan-left {
   background-image:url("buttons/pan_left.png");
   margin-right:1px;
 }
 .timeglider-pan-right {
   background-image:url("buttons/pan_right.png");
 }
-/* add hover effects? */
-
-
 
 .timeglider-logo {
     float:left;
@@ -476,7 +508,7 @@
     position:absolute;
     bottom:-20px;
     left:6px;
-}
+}*/
 
 
 
@@ -491,18 +523,18 @@
 		
 }
 
-
+/*
 .timeglider-menu-modal ul {
     list-style:none;
     margin:0;
     padding:0;
-}
+}*/
 
 .timeglider-menu-modal ul li {
 		font-size:11px;
 		margin:3px 0 3px 0;
 		padding:3px 0 3px 0;
-		cursor:pointer;
+/*FK		cursor:pointer;*/
 		color:#666;
 	}
 
@@ -517,8 +549,8 @@
 }
 
 .timeglider-legend {
-  position:absolute;
-  width:150px;
+  /*position:absolute;
+  width:150px;*/
   -webkit-border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0;
   -moz-border-radius-topleft: 0;
@@ -533,9 +565,9 @@
   margin-right:8px;
 }
 
-.timeglider-legend .timeglider-menu-modal-content {
+/*.timeglider-legend .timeglider-menu-modal-content {
   margin-top:8px;
-}
+}*/
 
 .timeglider-legend ul li {
   color:#999;
@@ -653,7 +685,7 @@
 	font-size:11px;
 	color:#555;
 	margin:8px;
-	max-height:200px;
+	/*max-height:200px; FK*/
 	overflow-y:auto;
 }
 

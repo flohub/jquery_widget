@@ -138,12 +138,12 @@
             // or it's going to be thumbnailed into the "bar"
             if (b.image) {
               if (b.image.display_class == "layout") {
-                title_adj = b.image.height + 4;
+                title_adj = 54;//FK b.image.height + 4;
               } 
               // different image classes ("bar", "above") are positioned
               // in an $.each routine back in TimelineView rather than
               // being given absolute positioning here.
-              img = "<div class='timeglider-event-image-" + b.image.display_class + "'><img src='" + b.image.src + "'></div>";
+              img = "<div class='timeglider-event-image-" + b.image.display_class + "'><img src='" + b.image.src + "' style='height:" + (title_adj-4) + "px'></div>";//FK
             } else {
               // no image
               img = "";
@@ -175,7 +175,7 @@
             }
             
           // note: divs that are higher have lower "top" values
-           if (Math.abs(b.top) > (ceiling - ceiling_padding)) {
+/*           if (Math.abs(b.top) > (ceiling - ceiling_padding)) {
              // + + + symbols in place of events just under ceiling
              // if things are higher than the ceiling, show plus signs instead,
              // and we'll zoom in with these.
@@ -183,12 +183,12 @@
                     "px; top:-" + (ceiling - (Math.floor(ceiling_padding/3))) + "px'>+</div>";
                     
                     
-           } else {
+           } else {*/
              
              // TODO: function for getting "standard" event shit
               html += "<div class='timeglider-timeline-event " + span_selector_class + "' id='ev_" + b.id + "' "
               + "style='width:" + b.width  + "px;"
-              + "height:" + b.height + "px;"
+              + "height:" + (title_adj-4) + "px;"//FK
               + "left:" + b.left  + "px;" 
               + "opacity:" + b.opacity + ";"
               + "top:" + b.top + "px;"
@@ -200,7 +200,7 @@
               
               
             
-           }// end if/else :: height > ceiling
+//           }// end if/else :: height > ceiling
             
           } // end if it's got valid HTML
             
